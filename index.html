@@ -97,6 +97,16 @@ h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:8px 0 14px;letter-spacing:-.01em}
 .shot{border:1px dashed var(--cardb);border-radius:18px;min-height:280px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:24px;background:linear-gradient(135deg,var(--card),transparent)}
 .shot b{display:block;font-size:2rem;margin-bottom:6px}
 
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:22px}
+.card.proj{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.thumb{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:var(--bg2)}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
+.card.proj:hover .thumb img{transform:scale(1.05)}
+.kind{position:absolute;left:12px;top:12px;font-size:.74rem;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:99px;background:rgba(7,13,28,.78);color:#fff;backdrop-filter:blur(6px)}
+.pbody{padding:22px;display:flex;flex-direction:column;flex:1}
+.pbody p{flex:1}
+.pbtns{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.btn.small{padding:9px 18px;font-size:.92rem;border-radius:10px}
 /* consultora */
 .cta{text-align:center;background:linear-gradient(135deg,var(--deep),#0a1226);border-radius:28px;padding:64px 24px;border:1px solid var(--cardb);position:relative;overflow:hidden}
 .cta::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--accent2);opacity:.12;filter:blur(60px);right:-120px;top:-160px}
@@ -138,6 +148,7 @@ footer{padding:36px 0;text-align:center;color:var(--muted);font-size:.9rem;borde
         <a class="btn" href="https://github.com/nibrill">GitHub</a>
       </div>
       <div class="stats">
+        <div><b>5</b><span>proyectos públicos</span></div>
         <div><b>20+</b><span>tecnologías</span></div>
         <div><b>Web · Móvil · Desktop</b><span>plataformas</span></div>
         <div><b>Chile</b><span>ubicación</span></div>
@@ -188,24 +199,56 @@ footer{padding:36px 0;text-align:center;color:var(--muted);font-size:.9rem;borde
     <div class="rv">
       <div class="kicker">Proyectos</div>
       <h2>Proyectos públicos</h2>
-      <p class="sub">Entre los sistemas que he desarrollado, algunos los dejo abiertos para que cualquiera los use.</p>
+      <p class="sub">Sistemas que he desarrollado y dejo abiertos (MIT) para que cualquiera los use o aprenda de ellos.</p>
     </div>
-    <div class="project">
-      <div class="card rv">
-        <span class="badge">OPEN SOURCE · MIT</span>
-        <h3 style="font-size:1.5rem">CorePOS Community</h3>
-        <p>Punto de venta de escritorio para pymes en Windows, con IVA 19 % (Chile). Gratuito y de código abierto.</p>
-        <ul class="list">
-          <li>Ventas, caja por turnos, inventario, compras y proveedores</li>
-          <li>Reportes con gráficos y exportación a Excel</li>
-          <li>Usuarios con roles y permisos por módulo</li>
-          <li>API local para usar el celular como escáner de códigos</li>
-        </ul>
-        <div class="tags" style="margin:0 0 22px"><span class="tag">Python</span><span class="tag">PySide6</span><span class="tag">MySQL</span><span class="tag">FastAPI</span></div>
-        <a class="btn primary" href="https://github.com/nibrill/corepos-community">Ver en GitHub →</a>
-      </div>
-      <div class="shot rv"><div><b>🖼️</b>Capturas de pantalla<br>próximamente</div></div>
+    <div class="projects">
+      <article class="card proj rv">
+        <a class="thumb" href="https://github.com/nibrill/corepos-community"><img src="img/corepos.jpg" alt="Captura de CorePOS Community" loading="lazy"><span class="kind">Escritorio</span></a>
+        <div class="pbody">
+          <h3>CorePOS Community</h3>
+          <p>Punto de venta de escritorio para pymes con IVA 19 % (Chile): ventas, caja, inventario, compras, reportes, roles y API para escáner móvil.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">PySide6</span><span class="tag">MySQL</span><span class="tag">FastAPI</span></div>
+          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/corepos-community">Código</a></div>
+        </div>
+      </article>
+      <article class="card proj rv">
+        <a class="thumb" href="https://github.com/nibrill/garage360"><img src="img/garage.jpg" alt="Captura de Garage360" loading="lazy"><span class="kind">Web</span></a>
+        <div class="pbody">
+          <h3>Garage360</h3>
+          <p>Plataforma de gestión y reservas para talleres mecánicos: directorio con mapa, agendamiento de citas, pagos y paneles por rol.</p>
+          <div class="tags"><span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span><span class="tag">Docker</span></div>
+          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/garage360">Código</a></div>
+        </div>
+      </article>
+      <article class="card proj rv">
+        <a class="thumb" href="https://github.com/nibrill/Terreno"><img src="img/terreno.jpg" alt="Captura de Terreno" loading="lazy"><span class="kind">Móvil · PWA</span></a>
+        <div class="pbody">
+          <h3>Terreno</h3>
+          <p>App gratuita y offline para toma de datos en faenas mineras de Chile: hidrogeología, geología, geotecnia, fotos, UTM, gráficos y Excel.</p>
+          <div class="tags"><span class="tag">TypeScript</span><span class="tag">PWA</span><span class="tag">Offline-first</span></div>
+          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/Terreno">Código</a><a class="btn" href="https://nibrill.github.io/Terreno/">Demo en vivo</a></div>
+        </div>
+      </article>
+      <article class="card proj rv">
+        <a class="thumb" href="https://github.com/nibrill/arenadb-oracle-plsql"><img src="img/arena.jpg" alt="Captura de ArenaDB" loading="lazy"><span class="kind">Base de datos</span></a>
+        <div class="pbody">
+          <h3>ArenaDB</h3>
+          <p>Torneos de eSports en Oracle SQL y PL/SQL: esquema, vistas, package y triggers, con demo web interactiva.</p>
+          <div class="tags"><span class="tag">Oracle</span><span class="tag">PL/SQL</span><span class="tag">SQL</span></div>
+          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/arenadb-oracle-plsql">Código</a><a class="btn" href="https://nibrill.github.io/arenadb-oracle-plsql/">Demo en vivo</a></div>
+        </div>
+      </article>
+      <article class="card proj rv">
+        <a class="thumb" href="https://github.com/nibrill/vestra"><img src="img/vestra.jpg" alt="Captura de VESTRA" loading="lazy"><span class="kind">E-commerce</span></a>
+        <div class="pbody">
+          <h3>VESTRA</h3>
+          <p>Tienda de ropa online full-stack: catálogo, carrito, favoritos, órdenes y panel de administración.</p>
+          <div class="tags"><span class="tag">Flask</span><span class="tag">Python</span><span class="tag">MySQL</span></div>
+          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/vestra">Código</a></div>
+        </div>
+      </article>
     </div>
+    <p class="sub rv" style="margin-top:32px">Además desarrollo sistemas privados y a medida para clientes desde <a href="https://coreconsulting.cl">Core Consulting</a>, incluida la edición comercial de CorePOS con facturación electrónica.</p>
   </div>
 </section>
 
