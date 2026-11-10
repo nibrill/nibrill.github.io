@@ -64,8 +64,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .burger{display:none}
 @media(max-width:900px){
   .burger{display:grid}
-  .menu{position:fixed;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--cardb);padding:10px 20px 18px;gap:2px;transform:translateY(-130%);transition:transform .3s ease;z-index:-1}
-  .menu.open{transform:none}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--cardb);padding:10px 20px 18px;gap:2px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+  .menu.open{opacity:1;visibility:visible;pointer-events:auto;transform:none}
   .menu a{padding:12px 10px;font-size:1rem}
 }
 
