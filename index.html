@@ -18,7 +18,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="favicon-192.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Nicolás Brill","jobTitle":"Ingeniero Informático","url":"https://nibrill.github.io/","image":"https://nibrill.github.io/nicolas.jpg","sameAs":["https://github.com/nibrill","https://www.linkedin.com/in/nicolas-brill","https://coreconsulting.cl"],"worksFor":{"@type":"Organization","name":"Core Consulting","url":"https://coreconsulting.cl"},"address":{"@type":"PostalAddress","addressCountry":"CL"},"knowsAbout":["Python","Django","Angular","Ionic","Laravel","PostgreSQL","MySQL","Oracle PL/SQL","Inteligencia Artificial"]}
+{"@context":"https://schema.org","@type":"Person","name":"Nicolás Brill","jobTitle":"Ingeniero Informático","url":"https://nibrill.github.io/","email":"mailto:contacto@coreconsulting.cl","image":"https://nibrill.github.io/nicolas.jpg","sameAs":["https://github.com/nibrill","https://www.linkedin.com/in/nicolas-brill","https://coreconsulting.cl"],"worksFor":{"@type":"Organization","name":"Core Consulting","url":"https://coreconsulting.cl"},"address":{"@type":"PostalAddress","addressCountry":"CL"},"knowsAbout":["APIs REST","Automatización de procesos","Python","Django","Angular","Ionic","Laravel","PostgreSQL","MySQL","Oracle PL/SQL","Inteligencia Artificial"]}
 </script>
 <script>
 try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}
@@ -91,7 +91,7 @@ h1 em{font-style:normal;background:linear-gradient(90deg,var(--link),var(--accen
 .btn.small{padding:9px 18px;font-size:.92rem;border-radius:10px}
 .hero-photo{position:relative;width:min(330px,70vw);aspect-ratio:1;justify-self:center}
 .hero-photo .me{width:100%;height:100%;object-fit:cover;border-radius:50%;border:4px solid var(--accent);box-shadow:0 0 0 12px var(--glow),0 30px 80px -24px var(--accent)}
-.hero-photo .badge-logo{position:absolute;right:-4px;bottom:8px;width:88px;background:#fff;border-radius:22px;padding:12px;box-shadow:0 14px 30px -8px rgba(0,0,0,.45)}
+.hero-photo .badge-logo{position:absolute;right:-6px;bottom:-2px;width:74px;background:#fff;border-radius:22px;padding:12px;box-shadow:0 14px 30px -8px rgba(0,0,0,.45)}
 .hero-photo .chip{position:absolute;left:-10px;top:14%;background:var(--card);border:1px solid var(--cardb);border-radius:12px;padding:8px 12px;font-size:.8rem;font-weight:600;box-shadow:0 12px 30px -14px rgba(0,0,0,.5)}
 .hero-photo .chip.b{left:auto;right:-14px;top:auto;bottom:34%}
 
@@ -111,6 +111,7 @@ section.alt{background:var(--bg2)}
 h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:8px 0 14px;letter-spacing:-.02em;line-height:1.15;font-weight:800}
 .sub{color:var(--muted);max-width:640px;margin:0 0 40px;font-size:1.05rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.grid.three{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
 .grid.four{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
 .card{background:var(--card);border:1px solid var(--cardb);border-radius:18px;padding:26px;transition:transform .25s,border-color .25s,box-shadow .25s}
 .card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 20px 44px -22px var(--accent)}
@@ -138,6 +139,9 @@ a.card{color:inherit;display:block}
 .card.proj:hover .thumb img{transform:scale(1.05)}
 .kind{position:absolute;left:12px;top:12px;font-size:.72rem;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:99px;background:rgba(7,13,28,.8);color:#fff;backdrop-filter:blur(6px)}
 .lic{position:absolute;right:12px;top:12px;font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:99px;background:rgba(53,214,160,.9);color:#04281c}
+.thumb.nopic{display:grid;place-items:center;background:linear-gradient(135deg,#0a1226,#1e4a8a 60%,#2a78e4)}
+.mtn{font-size:4.2rem;filter:drop-shadow(0 8px 20px rgba(0,0,0,.4))}
+.lic.own{background:rgba(124,196,255,.92);color:#0a1226}
 .pbody{padding:22px;display:flex;flex-direction:column;flex:1}
 .pbody p{flex:1}
 .pbtns{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
@@ -219,19 +223,17 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
     <div>
       <span class="eyebrow"><i></i> Disponible para proyectos</span>
       <h1>Nicolás <em>Brill</em></h1>
-      <p class="role">Ingeniero Informático <span>· Fundador de Core Consulting</span></p>
-      <p class="lead">Convierto procesos de negocio en software: <b>sistemas de gestión, aplicaciones web, móviles y de escritorio</b>, con bases de datos sólidas y <b>la IA como ventaja</b> para entregar más rápido y con mejor calidad.</p>
+      <p class="role">Ingeniero Informático <span>· Fundador de Core Consulting · Creador de Summit</span></p>
+      <p class="lead">Convierto procesos de negocio en software: <b>sistemas de gestión, aplicaciones web, móviles y de escritorio</b>, con <b>APIs, procesos automatizados</b>, bases de datos sólidas y <b>la IA como ventaja</b> para entregar más rápido y con mejor calidad.</p>
       <div class="btns">
-        <a class="btn primary" href="#contacto">Hablemos →</a>
+        <a class="btn primary" href="mailto:contacto@coreconsulting.cl">Escríbeme →</a>
         <a class="btn" href="#proyectos">Ver proyectos</a>
         <a class="btn" href="https://github.com/nibrill" rel="noopener">GitHub</a>
       </div>
     </div>
     <div class="hero-photo">
       <img class="me" src="nicolas.jpg" alt="Retrato de Nicolás Brill" width="330" height="330" fetchpriority="high">
-      <span class="chip">🐍 Python · SQL</span>
-      <span class="chip b">🤖 IA aplicada</span>
-      <img class="badge-logo" src="mark.png" alt="Logo de Core Consulting" width="64" height="71">
+      <img class="badge-logo" src="mark.png" alt="Logo de Core Consulting" width="52" height="58">
     </div>
   </div>
 </header>
@@ -252,11 +254,13 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
       <h2>Software a medida, de punta a punta</h2>
       <p class="sub">Desde el modelo de datos hasta la interfaz: diseño, desarrollo, puesta en marcha y mantención.</p>
     </div>
-    <div class="grid four">
+    <div class="grid three">
       <div class="card rv"><div class="ico" aria-hidden="true">🧾</div><h3>Sistemas de gestión</h3><p>ERP, POS, inventario, facturación y reportes adaptados a cómo trabaja tu empresa.</p></div>
       <div class="card rv"><div class="ico" aria-hidden="true">🌐</div><h3>Aplicaciones web</h3><p>Plataformas y APIs con Angular, Django y Laravel, rápidas y mantenibles.</p></div>
       <div class="card rv"><div class="ico" aria-hidden="true">📱</div><h3>Apps móviles</h3><p>Aplicaciones híbridas con Ionic y Angular para iOS y Android desde un solo código.</p></div>
       <div class="card rv"><div class="ico" aria-hidden="true">🗄️</div><h3>Bases de datos</h3><p>Modelamiento, optimización y PL/SQL en PostgreSQL, MySQL, SQL Server y Oracle.</p></div>
+      <div class="card rv"><div class="ico" aria-hidden="true">🔌</div><h3>APIs e integraciones</h3><p>Diseño y consumo de APIs REST para conectar sistemas, pasarelas, servicios externos y tus propias aplicaciones.</p></div>
+      <div class="card rv"><div class="ico" aria-hidden="true">⚙️</div><h3>Procesos automatizados</h3><p>Flujos que trabajan solos: sincronización de datos, reportes, notificaciones y tareas repetitivas sin intervención manual.</p></div>
     </div>
   </div>
 </section>
@@ -265,8 +269,8 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
   <div class="wrap">
     <div class="rv">
       <div class="kicker">Portafolio</div>
-      <h2>Proyectos públicos</h2>
-      <p class="sub">Sistemas que he desarrollado y dejo abiertos (MIT) para que cualquiera los use o aprenda de ellos.</p>
+      <h2>Proyectos</h2>
+      <p class="sub">Productos propios y sistemas open source (MIT) que he desarrollado y dejo abiertos para que cualquiera los use o aprenda de ellos.</p>
     </div>
     <div class="filters rv" role="group" aria-label="Filtrar proyectos">
       <button class="fbtn" type="button" data-f="all" aria-pressed="true">Todos</button>
@@ -276,13 +280,21 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
       <button class="fbtn" type="button" data-f="db" aria-pressed="false">Bases de datos</button>
     </div>
     <div class="projects" id="projects">
-      <article class="card proj rv" data-k="desktop">
-        <a class="thumb" href="https://github.com/nibrill/corepos-community" rel="noopener"><img src="img/corepos.jpg" alt="Captura del panel de CorePOS Community" width="900" height="563" loading="lazy"><span class="kind">Escritorio</span><span class="lic">MIT</span></a>
+      <article class="card proj rv" data-k="mobile">
+        <div class="thumb nopic" aria-hidden="true"><span class="mtn">⛰️</span><span class="kind">App móvil</span><span class="lic own">Creación propia</span></div>
         <div class="pbody">
-          <h3>CorePOS Community</h3>
+          <h3>Summit — app de trekking</h3>
+          <p>Aplicación de trekking creada por mí. Un producto propio, de la idea al desarrollo, pensado para quienes salen a la montaña.</p>
+          <div class="tags"><span class="tag">App móvil</span><span class="tag">Producto propio</span></div>
+        </div>
+      </article>
+      <article class="card proj rv" data-k="desktop">
+        <a class="thumb" href="https://github.com/nibrill/sistema-punto-de-venta-open-source-code" rel="noopener"><img src="img/corepos.jpg" alt="Captura del panel del Sistema Punto de Venta Open Source Code" width="900" height="563" loading="lazy"><span class="kind">Escritorio</span><span class="lic">MIT</span></a>
+        <div class="pbody">
+          <h3>Sistema Punto de Venta Open Source Code</h3>
           <p>Punto de venta de escritorio para pymes con IVA 19 % (Chile): ventas, caja, inventario, compras, reportes, roles y API para escáner móvil.</p>
           <div class="tags"><span class="tag">Python</span><span class="tag">PySide6</span><span class="tag">MySQL</span><span class="tag">FastAPI</span></div>
-          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/corepos-community" rel="noopener">Ver código</a></div>
+          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/sistema-punto-de-venta-open-source-code" rel="noopener">Ver código</a></div>
         </div>
       </article>
       <article class="card proj rv" data-k="web">
@@ -322,7 +334,7 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
         </div>
       </article>
     </div>
-    <p class="note rv">Además desarrollo sistemas privados y a medida para clientes desde <a href="https://coreconsulting.cl" rel="noopener">Core Consulting</a>, incluida la edición comercial de CorePOS con facturación electrónica.</p>
+    <p class="note rv">Además desarrollo sistemas privados y a medida para clientes desde <a href="https://coreconsulting.cl" rel="noopener">Core Consulting</a>, incluida una edición comercial de mi sistema de punto de venta con facturación electrónica.</p>
   </div>
 </section>
 
@@ -358,7 +370,7 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
       <div class="card rv"><h3>Apps de escritorio y móvil</h3><div class="tags"><span class="tag">PySide6 / Qt</span><span class="tag">Ionic</span><span class="tag">Apps offline-first</span><span class="tag">PyInstaller</span><span class="tag">Instaladores Windows</span></div></div>
       <div class="card rv"><h3>Datos y reportes</h3><div class="tags"><span class="tag">matplotlib</span><span class="tag">openpyxl</span><span class="tag">ReportLab</span><span class="tag">Exportación a Excel</span><span class="tag">Dashboards</span></div></div>
       <div class="card rv"><h3>DevOps y despliegue</h3><div class="tags"><span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD</span><span class="tag">GitHub Pages</span><span class="tag">Linux</span></div></div>
-      <div class="card rv"><h3>Arquitectura y buenas prácticas</h3><div class="tags"><span class="tag">APIs REST</span><span class="tag">Roles y permisos</span><span class="tag">Seguridad web</span><span class="tag">Tests automáticos</span><span class="tag">Documentación</span></div></div>
+      <div class="card rv"><h3>Arquitectura y buenas prácticas</h3><div class="tags"><span class="tag">APIs REST</span><span class="tag">Integración de APIs</span><span class="tag">Webhooks</span><span class="tag">Automatización de procesos</span><span class="tag">Tareas programadas</span><span class="tag">Roles y permisos</span><span class="tag">Seguridad web</span><span class="tag">Tests automáticos</span><span class="tag">Documentación</span></div></div>
       <div class="card rv"><h3>Herramientas</h3><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Entornos virtuales</span><span class="tag">Variables de entorno</span><span class="tag">Claude Code</span><span class="tag">IA generativa</span><span class="tag">Prompt engineering</span></div></div>
     </div>
   </div>
@@ -410,6 +422,7 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
       <p class="sub">Cuéntame qué necesitas y vemos cómo hacerlo realidad.</p>
     </div>
     <div class="contact">
+      <a class="card rv" href="mailto:contacto@coreconsulting.cl"><div class="ico" aria-hidden="true">✉️</div><div><h3>Correo</h3><p>contacto@coreconsulting.cl</p></div></a>
       <a class="card rv" href="https://coreconsulting.cl" rel="noopener"><div class="ico" aria-hidden="true">🏢</div><div><h3>Core Consulting</h3><p>coreconsulting.cl</p></div></a>
       <a class="card rv" href="https://www.linkedin.com/in/nicolas-brill" rel="noopener"><div class="ico" aria-hidden="true">🔗</div><div><h3>LinkedIn</h3><p>in/nicolas-brill</p></div></a>
       <a class="card rv" href="https://github.com/nibrill" rel="noopener"><div class="ico" aria-hidden="true">💻</div><div><h3>GitHub</h3><p>github.com/nibrill</p></div></a>
@@ -426,7 +439,7 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
         <div>Ingeniero Informático · Fundador de Core Consulting</div>
       </div>
       <div class="flinks">
-        <a href="#proyectos">Proyectos</a><a href="#ia">IA</a><a href="#stack">Tecnologías</a><a href="https://github.com/nibrill" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/nicolas-brill" rel="noopener">LinkedIn</a><a href="https://coreconsulting.cl" rel="noopener">Core Consulting</a>
+        <a href="mailto:contacto@coreconsulting.cl">contacto@coreconsulting.cl</a><a href="#proyectos">Proyectos</a><a href="#ia">IA</a><a href="#stack">Tecnologías</a><a href="https://github.com/nibrill" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/nicolas-brill" rel="noopener">LinkedIn</a><a href="https://coreconsulting.cl" rel="noopener">Core Consulting</a>
       </div>
     </div>
     <div class="copy"><span>© 2026 Nicolás Brill</span><span>Hecho en Chile 🇨🇱</span></div>
