@@ -155,6 +155,16 @@ a.card{color:inherit;display:block}
 .step h3{margin:0 0 6px;font-size:1.05rem}
 .step p{margin:0;color:var(--muted);font-size:.92rem}
 
+/* lightbox */
+dialog#lb{border:0;padding:0;background:transparent;max-width:min(1100px,94vw);width:100%;color:#fff;overflow:visible}
+dialog#lb::backdrop{background:rgba(4,8,20,.86);backdrop-filter:blur(4px)}
+#lb figure{margin:0;position:relative}
+#lb img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;border-radius:14px;background:#0b1630;box-shadow:0 30px 80px -20px #000}
+#lb figcaption{display:flex;justify-content:space-between;gap:12px;padding:12px 4px 0;font-size:.95rem;color:#dbe6fa}
+.lbbtn{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(7,13,28,.75);color:#fff;font-size:1.3rem;cursor:pointer}
+.lbbtn:hover{background:var(--accent)}
+.lbprev{left:-8px}.lbnext{right:-8px}
+.lbclose{position:absolute;top:-52px;right:0;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(7,13,28,.75);color:#fff;font-size:1.1rem;cursor:pointer}
 /* consultora */
 .cons{display:grid;grid-template-columns:.9fr 1.3fr;gap:40px;align-items:center;background:linear-gradient(135deg,var(--deep),#0a1226);border-radius:28px;padding:48px;border:1px solid var(--cardb);position:relative;overflow:hidden;color:#fff}
 .cons::after{content:"";position:absolute;width:440px;height:440px;border-radius:50%;background:#7cc4ff;opacity:.12;filter:blur(70px);right:-140px;top:-180px}
@@ -294,7 +304,7 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
           <h3>Sistema Punto de Venta Open Source Code</h3>
           <p>Punto de venta de escritorio para pymes con IVA 19 % (Chile): ventas, caja, inventario, compras, reportes, roles y API para escáner móvil.</p>
           <div class="tags"><span class="tag">Python</span><span class="tag">PySide6</span><span class="tag">MySQL</span><span class="tag">FastAPI</span></div>
-          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/sistema-punto-de-venta-open-source-code" rel="noopener">Ver código</a></div>
+          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/sistema-punto-de-venta-open-source-code" rel="noopener">Ver código</a><button class="btn small" type="button" data-g="pos">Ver 5 capturas</button></div>
         </div>
       </article>
       <article class="card proj rv" data-k="web">
@@ -303,7 +313,7 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
           <h3>Garage360</h3>
           <p>Plataforma de gestión y reservas para talleres mecánicos: directorio con mapa, agendamiento de citas, pagos y paneles por rol.</p>
           <div class="tags"><span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span><span class="tag">Docker</span></div>
-          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/garage360" rel="noopener">Ver código</a></div>
+          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/garage360" rel="noopener">Ver código</a><button class="btn small" type="button" data-g="garage">Ver 6 capturas</button></div>
         </div>
       </article>
       <article class="card proj rv" data-k="mobile">
@@ -330,7 +340,7 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
           <h3>VESTRA</h3>
           <p>Tienda de ropa online full-stack: catálogo, carrito, favoritos, órdenes y panel de administración.</p>
           <div class="tags"><span class="tag">Flask</span><span class="tag">Python</span><span class="tag">MySQL</span></div>
-          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/vestra" rel="noopener">Ver código</a></div>
+          <div class="pbtns"><a class="btn small primary" href="https://github.com/nibrill/vestra" rel="noopener">Ver código</a><button class="btn small" type="button" data-g="vestra">Ver 4 capturas</button></div>
         </div>
       </article>
     </div>
@@ -446,6 +456,16 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
   </div>
 </footer>
 
+<dialog id="lb" aria-label="Galería de capturas">
+  <button class="lbclose" type="button" aria-label="Cerrar">✕</button>
+  <figure>
+    <img id="lb-img" src="" alt="">
+    <button class="lbbtn lbprev" type="button" aria-label="Anterior">‹</button>
+    <button class="lbbtn lbnext" type="button" aria-label="Siguiente">›</button>
+    <figcaption><span id="lb-cap"></span><span id="lb-n"></span></figcaption>
+  </figure>
+</dialog>
+
 <button class="iconbtn" id="top-btn" type="button" aria-label="Volver arriba" title="Volver arriba">↑</button>
 
 <script>
@@ -478,6 +498,21 @@ footer{border-top:1px solid var(--cardb);padding:44px 0 30px;color:var(--muted);
     var f=b.getAttribute('data-f');
     cards.forEach(function(c){c.classList.toggle('hide',f!=='all'&&c.getAttribute('data-k')!==f)});
   })});
+  // gallery lightbox
+  var G={
+    pos:[["img/g/pos-dashboard.jpg","Panel principal con resumen del día"],["img/g/pos-ventas.jpg","Pantalla de ventas"],["img/g/pos-productos.jpg","Catálogo de productos"],["img/g/pos-caja.jpg","Caja por turnos"],["img/g/pos-graficos.jpg","Gráficos y reportes"]],
+    garage:[["img/g/g-inicio.jpg","Página de inicio"],["img/g/g-talleres.jpg","Directorio de talleres"],["img/g/g-mapa.jpg","Mapa geolocalizado"],["img/g/g-reserva.jpg","Reserva de hora"],["img/g/g-panel.jpg","Panel del encargado"],["img/g/g-admin.jpg","Panel de administración"]],
+    vestra:[["img/g/v-inicio.jpg","Página de inicio"],["img/g/v-categoria.jpg","Catálogo por categoría"],["img/g/v-producto.jpg","Detalle de producto"],["img/g/v-login.jpg","Inicio de sesión"]]
+  };
+  var lb=d.getElementById('lb'),li=d.getElementById('lb-img'),lc=d.getElementById('lb-cap'),ln=d.getElementById('lb-n'),cur=[],ix=0,opener=null;
+  function show(){var it=cur[ix];li.src=it[0];li.alt=it[1];lc.textContent=it[1];ln.textContent=(ix+1)+' / '+cur.length}
+  d.querySelectorAll('[data-g]').forEach(function(b){b.addEventListener('click',function(){cur=G[b.getAttribute('data-g')];ix=0;opener=b;show();if(lb.showModal)lb.showModal();else lb.setAttribute('open','')})});
+  d.querySelector('.lbnext').addEventListener('click',function(){ix=(ix+1)%cur.length;show()});
+  d.querySelector('.lbprev').addEventListener('click',function(){ix=(ix-1+cur.length)%cur.length;show()});
+  d.querySelector('.lbclose').addEventListener('click',function(){lb.close()});
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+  lb.addEventListener('keydown',function(e){if(e.key==='ArrowRight')d.querySelector('.lbnext').click();if(e.key==='ArrowLeft')d.querySelector('.lbprev').click()});
+  lb.addEventListener('close',function(){if(opener)opener.focus()});
   // progress, top button, active link
   var bar=d.getElementById('progress'),tb=d.getElementById('top-btn');
   function onScroll(){
