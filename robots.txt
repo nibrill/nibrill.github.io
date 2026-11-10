@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nibrill.github.io/sitemap.xml
