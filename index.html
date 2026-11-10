@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nicolás Brill · Ingeniero Informático</title>
+<meta name="description" content="Portafolio de Nicolás Brill: software de escritorio y sistemas de gestión para pymes en Python, PySide6 y MySQL.">
+<style>
+:root{--bg:#0f1419;--card:#18202a;--text:#e7edf3;--muted:#9aa8b6;--accent:#4fc3a1;--line:#263241}
+@media(prefers-color-scheme:light){:root{--bg:#f6f8fa;--card:#fff;--text:#1b2733;--muted:#5b6b7a;--accent:#0f8a6a;--line:#dde4ea}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:860px;margin:0 auto;padding:0 16px 64px}
+header{padding:72px 0 40px}
+h1{font-size:clamp(2rem,6vw,3rem);margin:0 0 8px;line-height:1.15}
+.lead{color:var(--muted);font-size:1.15rem;max-width:620px;margin:0 0 24px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+a.btn{padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600;border:1px solid var(--accent);color:var(--accent)}
+a.btn.primary{background:var(--accent);color:#08140f}
+h2{margin:48px 0 16px;font-size:1.4rem;border-bottom:1px solid var(--line);padding-bottom:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:16px}
+.card h3{margin:0 0 4px}
+.tag{display:inline-block;font-size:.8rem;padding:2px 10px;border-radius:99px;background:var(--bg);border:1px solid var(--line);color:var(--muted);margin:4px 6px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+ul{padding-left:20px;margin:8px 0}
+a{color:var(--accent)}
+footer{color:var(--muted);margin-top:56px;font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Nicolás Brill</h1>
+  <p class="lead">Ingeniero Informático y fundador de <a href="https://coreconsulting.cl">Core Consulting</a>, en Chile. Diseño y construyo software de escritorio, web y móvil, y sistemas de gestión que las empresas usan a diario.</p>
+  <div class="btns">
+    <a class="btn primary" href="https://coreconsulting.cl">Core Consulting</a>
+    <a class="btn" href="https://github.com/nibrill">GitHub</a>
+    <a class="btn" href="https://github.com/nibrill/corepos-community">Ver CorePOS</a>
+  </div>
+</header>
+
+<section>
+<h2>Proyecto destacado</h2>
+<div class="card">
+  <h3>CorePOS — punto de venta para pymes</h3>
+  <p><strong>Problema:</strong> las pymes chilenas necesitan un POS simple, local y asequible, con IVA 19 %, control de caja e inventario, sin depender de la nube.</p>
+  <p><strong>Solución:</strong> aplicación de escritorio para Windows con ventas, caja por turnos, inventario, compras y proveedores, reportes con gráficos, exportación a Excel, usuarios con roles y una API local para usar el celular como escáner de códigos.</p>
+  <p><strong>Modelo:</strong> edición comunitaria open source (MIT) y edición comercial con facturación electrónica SII, licenciamiento e instalador.</p>
+  <ul>
+    <li>Lógica de negocio separada de la interfaz (módulos en <code>app/</code>, páginas en <code>app/ui/pages/</code>).</li>
+    <li>Roles y permisos por módulo: ADMIN, VENDEDOR, ENCARGADO_STOCK.</li>
+    <li>API FastAPI con token y CORS cerrado por defecto.</li>
+  </ul>
+  <span class="tag">Python</span><span class="tag">PySide6</span><span class="tag">MySQL</span><span class="tag">FastAPI</span><span class="tag">matplotlib</span><span class="tag">openpyxl</span><span class="tag">ReportLab</span>
+  <p><a href="https://github.com/nibrill/corepos-community">Código fuente en GitHub →</a></p>
+</div>
+</section>
+
+<section>
+<h2>Habilidades</h2>
+<div class="grid">
+  <div class="card"><h3>Lenguajes</h3><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PL/SQL</span><span class="tag">TypeScript</span><span class="tag">PHP</span></div>
+  <div class="card"><h3>Frameworks</h3><span class="tag">Django</span><span class="tag">Laravel</span><span class="tag">Angular</span><span class="tag">Ionic</span><span class="tag">FastAPI</span><span class="tag">PySide6 / Qt</span></div>
+  <div class="card"><h3>Bases de datos</h3><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">SQL Server</span><span class="tag">Oracle (PL/SQL)</span></div>
+  <div class="card"><h3>Herramientas</h3><span class="tag">Git / GitHub</span><span class="tag">GitHub Actions</span><span class="tag">PyInstaller</span></div>
+</div>
+<h2>Core Consulting</h2>
+<div class="card">
+  <p>Soy dueño de <strong>Core Consulting</strong>, consultora de desarrollo de software. Desde ahí tomo proyectos a medida: sistemas de gestión, aplicaciones web y móviles, integración y modelamiento de bases de datos.</p>
+  <p><a href="https://coreconsulting.cl">coreconsulting.cl →</a></p>
+</div>
+</section>
+
+<section>
+<h2>Contacto</h2>
+<p>Para proyectos y consultas: <a href="https://coreconsulting.cl">coreconsulting.cl</a>. También en <a href="https://github.com/nibrill">GitHub</a>.</p>
+</section>
+
+<footer>© 2026 Nicolás Brill</footer>
+</main>
+</body>
+</html>
