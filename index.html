@@ -41,7 +41,7 @@ nav ul a:hover{color:var(--text)}
 .hero{position:relative;padding:150px 0 100px;background:radial-gradient(1200px 500px at 80% -10%,var(--glow),transparent 60%),radial-gradient(800px 400px at 0% 100%,var(--glow),transparent 60%);overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--cardb) 1px,transparent 1px),linear-gradient(90deg,var(--cardb) 1px,transparent 1px);background-size:44px 44px;opacity:.35;mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 70%)}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.4fr .8fr;gap:48px;align-items:center}
-@media(max-width:820px){.hero{padding:120px 0 70px}.hero .wrap{grid-template-columns:1fr}.hero-card{order:-1;max-width:260px}}
+@media(max-width:820px){.hero{padding:120px 0 70px}.hero .wrap{grid-template-columns:1fr}.hero-photo{order:-1;width:min(240px,62vw)}}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);font-weight:600;padding:6px 14px;border:1px solid var(--cardb);border-radius:99px;background:var(--card)}
 .eyebrow i{width:8px;height:8px;border-radius:50%;background:#35d6a0;box-shadow:0 0 0 0 rgba(53,214,160,.6);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(53,214,160,0)}100%{box-shadow:0 0 0 0 rgba(53,214,160,0)}}
@@ -57,6 +57,9 @@ h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent2),var(--ac
 .hero-card{background:#fff;border-radius:28px;padding:28px;display:flex;flex-direction:column;align-items:center;gap:14px;box-shadow:0 30px 80px -20px var(--glow),0 0 0 1px var(--cardb);animation:float 6s ease-in-out infinite}
 .hero-card img{width:150px}
 .hero-card span{color:#12306a;font-weight:800;letter-spacing:.2em;font-size:.82rem}
+.hero-photo{position:relative;width:min(320px,70vw);aspect-ratio:1;justify-self:center}
+.hero-photo .me{width:100%;height:100%;object-fit:cover;border-radius:50%;border:4px solid var(--accent2);box-shadow:0 0 0 10px var(--glow),0 30px 70px -20px var(--glow);animation:float 6s ease-in-out infinite}
+.hero-photo .badge-logo{position:absolute;right:-6px;bottom:6px;width:84px;height:auto;background:#fff;border-radius:22px;padding:12px;box-shadow:0 12px 30px -8px rgba(0,0,0,.4)}
 @keyframes float{50%{transform:translateY(-10px)}}
 .stats{display:flex;gap:34px;margin-top:40px;flex-wrap:wrap}
 .stats div b{display:block;font-size:1.7rem;color:var(--text)}
@@ -140,9 +143,9 @@ footer{padding:36px 0;text-align:center;color:var(--muted);font-size:.9rem;borde
         <div><b>Chile</b><span>ubicación</span></div>
       </div>
     </div>
-    <div class="hero-card">
-      <img src="mark.png" alt="Logo Core Consulting">
-      <span>CORE CONSULTING</span>
+    <div class="hero-photo">
+      <img class="me" src="nicolas.jpg" alt="Nicolás Brill" width="300" height="300">
+      <img class="badge-logo" src="mark.png" alt="Core Consulting">
     </div>
   </div>
 </header>
